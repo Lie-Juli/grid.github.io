@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 10% 40% 40% 10%;
+    }
+
+    .header{
+        background-color: black;
+        color: white;
+        grid-column: 1/span 4;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .footer{
+        background-color: black;
+        color: white;
+        grid-column: 1/span 4;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+    .item1{
+        background-image: url(sprite.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-row: 2/span 2;
+    }
+
+    .item2{
+        background-image: url(cocacola.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-column: 2/span 2;
+    }
+
+    .item3{
+        background-image: url(fanta.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-column: 4/4;
+        grid-row: 2/span 2;
+    }
+
+    .item4{
+        background-image: url(pepsi.jpg);
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+        grid-column: 2/span 2;
+    }
+
+    @media screen and (max-width: 576px) {
+        .container{
+            grid-template-rows: 10% 20% 20% 20% 20% 10%;
+        }
+        
+        .item1{
+            background-image: url(sprite-phone.jpg);
+            grid-column: 1/span 4;
+            grid-row: 2;
+        }
+
+        .item2{
+            background-image: url(cocacola-phone.jpg);
+            grid-column: 1/span 4;
+            grid-row: 3;
+        }
+
+        .item3{
+            background-image: url(fanta-phone.png);
+            grid-column: 1/span 4;
+            grid-row: 4;
+        }
+
+        .item4{
+            background-image: url(pepsi-phone.jpg);
+            grid-column: 1/span 4;
+            grid-row: 5;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">Brand</div>
+        <div class="item1">
+        </div>
+        <div class="item2"></div>
+        <div class="item3">
+            
+        </div>
+        <div class="item4">
+            
+        </div>
+        <div class="footer">Minuman Soda</div>
+    </div>
+</body>
+</html>
